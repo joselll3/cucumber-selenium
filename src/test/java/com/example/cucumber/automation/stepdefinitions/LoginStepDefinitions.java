@@ -12,9 +12,11 @@ public class LoginStepDefinitions {
 		System.out.println("^User is on NetBanking landing page$");
 	}
 
-	@When("^User login into application with username and password$")
-	public void user_login_into_application_with_username_and_password() throws Throwable {
-		System.out.println("^User login into application with username and password$");
+	@When("User login into application with username {string} and password {string}")
+	public void user_login_into_application_with_username_and_password(String username, String password) {
+		System.out.println("^User login into application with username {string} and password {string}$");
+		System.out.println("username=" + username);
+		System.out.println("password=" + password);
 	}
 
 	@Then("^Home page is populated$")
@@ -22,9 +24,9 @@ public class LoginStepDefinitions {
 		System.out.println("^Home page is populated$");
 	}
 
-	@And("^Cards are displayed$")
-	public void cards_are_displayed() throws Throwable {
-		System.out.println("^Cards are displayed$");
+	@And("Cards displayed are {string}")
+	public void cards_displayed_are(String string) {
+		System.out.println("Cards displayed are " + string);
 	}
 
 }
