@@ -15,7 +15,6 @@ public class LoginStepDefinitions {
 
 	@When("User login into application with username {string} and password {string}")
 	public void user_login_into_application_with_username_and_password(String username, String password) {
-		System.out.println("^User login into application with username {string} and password {string}$");
 		System.out.println("username=" + username);
 		System.out.println("password=" + password);
 	}
@@ -33,6 +32,13 @@ public class LoginStepDefinitions {
 	@When("User sign up with following credentials")
 	public void user_sign_up_with_following_credentials(DataTable dataTable) {
 		System.out.println(dataTable.asLists().get(0));
+	}
+
+	@When("^User login in to application with username (.+) and password (.+)$")
+	public void user_login_in_to_application_with_username_and_password(String username, String password)
+			throws Throwable {
+		System.out.println("username=" + username);
+		System.out.println("password=" + password);
 	}
 
 }

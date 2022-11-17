@@ -20,3 +20,16 @@ When User sign up with following credentials
 
 Then Home page is populated
 And Cards displayed are "false"
+
+Scenario Outline: Home page default login
+When User login in to application with username <username> and password <password>
+Given User is on NetBanking landing page
+Then Home page is populated
+And Cards displayed are "false"
+
+Examples:
+|username|password|
+|user1|pass1|
+|user2|pass2|
+|user3|pass3|
+
