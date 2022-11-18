@@ -8,6 +8,21 @@ import io.cucumber.java.en.When;
 
 public class LoginStepDefinitions {
 
+	@Given("validate the browser")
+	public void validate_the_browser() {
+		System.out.println("validate the browser");
+	}
+
+	@When("Browse is triggered")
+	public void browse_is_triggered() {
+		System.out.println("Browse is triggered");
+	}
+
+	@Then("Check if browser is started")
+	public void check_if_browser_is_started() {
+		System.out.println("Check if browser is started");
+	}
+
 	@Given("^User is on NetBanking landing page$")
 	public void user_is_on_netbanking_landing_page() throws Throwable {
 		System.out.println("^User is on NetBanking landing page$");

@@ -1,5 +1,10 @@
 Feature: Application Login
 
+Background:
+Given validate the browser
+When Browse is triggered
+Then Check if browser is started
+
 Scenario: Home Page Default Login
 Given User is on NetBanking landing page
 When User login into application with username "jin" and password "1234"
