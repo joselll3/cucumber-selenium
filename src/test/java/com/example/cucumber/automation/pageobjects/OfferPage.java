@@ -7,7 +7,7 @@ public class OfferPage {
 
 	private final static By SEARCH = By.xpath("//input[@type='search']");
 	private final static By PRODUCT_NAME = By.cssSelector("tr td:nth-child(1)");
-	private final static By LINK_TOP_DEALS = By.linkText("Top Deals");
+
 	private WebDriver driver;
 
 	public OfferPage(WebDriver driver) {
@@ -23,7 +23,4 @@ public class OfferPage {
 		return driver.findElement(PRODUCT_NAME).getText().split("-")[0].trim();
 	}
 
-	public void selectTopDealsPage() {
-		driver.findElement(LINK_TOP_DEALS).click();
-	}
 }

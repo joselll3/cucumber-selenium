@@ -7,6 +7,8 @@ public class LandingPage {
 
 	private final static By SEARCH = By.xpath("//input[@type='search']");
 	private final static By PRODUCT_NAME = By.cssSelector("h4.product-name");
+	private final static By LINK_TOP_DEALS = By.linkText("Top Deals");
+
 	private WebDriver driver;
 
 	public LandingPage(WebDriver driver) {
@@ -20,5 +22,9 @@ public class LandingPage {
 
 	public String getProductName() {
 		return driver.findElement(PRODUCT_NAME).getText().split("-")[0].trim();
+	}
+
+	public void selectTopDealsPage() {
+		driver.findElement(LINK_TOP_DEALS).click();
 	}
 }
