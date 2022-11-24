@@ -32,4 +32,8 @@ public class TestContextSetup {
 		return genericUtils;
 	}
 
+	public TestBase getTestBase() {
+		return testBase;
+	}
+
 }
