@@ -3,8 +3,8 @@ package com.example.cucumber.automation.stepdefinitions;
 import java.util.Iterator;
 
 import org.junit.jupiter.api.Assertions;
-import org.openqa.selenium.By;
 
+import com.example.cucumber.automation.pageobjects.OfferPage;
 import com.example.cucumber.automation.utils.TestContextSetup;
 
 import io.cucumber.java.en.Then;
@@ -13,9 +13,11 @@ public class OfferPageStepDefinitions {
 
 	private TestContextSetup testContextSetup;
 	private String offerPageProductName;
+	private OfferPage offerPage;
 
 	public OfferPageStepDefinitions(TestContextSetup testContextSetup) {
 		this.testContextSetup = testContextSetup;
+		this.offerPage = new OfferPage(testContextSetup.getDriver());
 	}
 
 	@Then("user searched for {string} shortname in offers page")
@@ -23,15 +25,15 @@ public class OfferPageStepDefinitions {
 
 		swithToOfferPage();
 
-		testContextSetup.getDriver().findElement(By.xpath("//input[@type='search']")).sendKeys(shortName);
+		offerPage.searchItem(shortName);
 		Thread.sleep(2000);
-		offerPageProductName = testContextSetup.getDriver().findElement(By.cssSelector("tr td:nth-child(1)")).getText();
+		offerPageProductName = offerPage.getProductName();
 		System.out.println("Extracted product name offerPageProductName = " + offerPageProductName);
 
 	}
 
 	private void swithToOfferPage() {
-		testContextSetup.getDriver().findElement(By.linkText("Top Deals")).click();
+		offerPage.selectTopDealsPage();
 		Iterator<String> it = testContextSetup.getDriver().getWindowHandles().iterator();
 		it.next();
 		String childWindow = it.next();
