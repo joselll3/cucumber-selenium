@@ -16,7 +16,7 @@ public class OfferPageStepDefinitions {
 		this.testContextSetup = testContextSetup;
 	}
 
-	@Then("user searched for {string} shortname in offers page")
+	@Then("^user searched for (.+) shortname in offers page$")
 	public void user_searched_for_shortname_in_offers_page(String shortName) throws InterruptedException {
 
 		testContextSetup.getPageObjectManager().getLandingPage().selectTopDealsPage();
