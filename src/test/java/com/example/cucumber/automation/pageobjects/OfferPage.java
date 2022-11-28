@@ -5,8 +5,8 @@ import org.openqa.selenium.WebDriver;
 
 public class OfferPage {
 
-	private final static By SEARCH = By.xpath("//input[@type='search']");
-	private final static By PRODUCT_NAME = By.cssSelector("tr td:nth-child(1)");
+	private static final By SEARCH = By.xpath("//input[@type='search']");
+	private static final By PRODUCT_NAME = By.cssSelector("tr td:nth-child(1)");
 
 	private WebDriver driver;
 
