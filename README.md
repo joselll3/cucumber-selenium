@@ -12,3 +12,7 @@ https://rahulshettyacademy.com/seleniumPractise/#/
 
 ## Extend reports
 https://github.com/grasshopper7/extentreports-cucumber7-adapter
+
+## Run with maven
+mvn test
+Overrinding test by command line options: https://github.com/cucumber/cucumber-jvm/tree/main/cucumber-junit-platform-engine#configuration-options
