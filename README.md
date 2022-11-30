@@ -1,18 +1,22 @@
-# Basic cucumber project
+# Basic cucumber and selenium project
 
-Getting started using cucumber
+Getting started using cucumber and selenium
 
 ## Description
 
-see https://github.com/cucumber/cucumber-java-skeleton for initial config
-download chrome driver from https://chromedriver.chromium.org/downloads and put into src/test/resources
+[Archetype base for dependency config](https://github.com/cucumber/cucumber-java-skeleton) 
+[download chrome driver](https://chromedriver.chromium.org/downloads) and put it into src/test/resources folder
 
 ## Examples
-https://rahulshettyacademy.com/seleniumPractise/#/
+All tests are based on the web [rahulshettyacademy](https://rahulshettyacademy.com/seleniumPractise/#/)
 
 ## Extend reports
-https://github.com/grasshopper7/extentreports-cucumber7-adapter
+library, you can create beautiful, interactive and detailed reports for your tests.
+[Extend reports site](https://github.com/grasshopper7/extentreports-cucumber7-adapter)
 
 ## Run with maven
+```
 mvn test
-Overrinding test by command line options: https://github.com/cucumber/cucumber-jvm/tree/main/cucumber-junit-platform-engine#configuration-options
+
+```
+[Overrinding test configuration by command line options](https://github.com/cucumber/cucumber-jvm/tree/main/cucumber-junit-platform-engine#configuration-options) 
