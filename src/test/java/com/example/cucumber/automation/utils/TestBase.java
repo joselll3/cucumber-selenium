@@ -1,6 +1,7 @@
 package com.example.cucumber.automation.utils;
 
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
@@ -19,8 +20,7 @@ public class TestBase {
 		if (driver == null) {
 			Properties properties = loadProperties();
 			if (properties.getProperty(PROPERTY_BROWSER).equalsIgnoreCase(BROWSER_CHROME)) {
-				System.setProperty("webdriver.chrome.driver",
-						Thread.currentThread().getContextClassLoader().getResource("chromedriver.exe").getFile());
+				Paths.get(System.getProperty("user.dir"), "src/test/resources/chromedriver.exe");
 				driver = new ChromeDriver();
 			}
 			driver.get(properties.getProperty(PROPERTY_BASE_URL));
