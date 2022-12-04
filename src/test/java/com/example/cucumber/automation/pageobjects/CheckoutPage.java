@@ -1,7 +1,11 @@
 package com.example.cucumber.automation.pageobjects;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CheckoutPage {
 
@@ -23,11 +27,13 @@ public class CheckoutPage {
 	}
 
 	public boolean verifyPromoBtn() {
-		return driver.findElement(PROMO_BTN).isDisplayed();
+		return new WebDriverWait(driver, Duration.ofSeconds(2))
+				.until(ExpectedConditions.visibilityOfElementLocated(PROMO_BTN)).isDisplayed();
 	}
 
 	public boolean verifyOrderBtn() {
-		return driver.findElement(PLACE_ORDER_BTN).isDisplayed();
+		return new WebDriverWait(driver, Duration.ofSeconds(2))
+				.until(ExpectedConditions.visibilityOfElementLocated(PLACE_ORDER_BTN)).isDisplayed();
 	}
 
 }

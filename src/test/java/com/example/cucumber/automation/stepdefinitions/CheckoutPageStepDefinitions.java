@@ -29,7 +29,6 @@ public class CheckoutPageStepDefinitions {
 	public void user_proceds_to_checkout_and_validate_the_tom_items_in_checkout_page(String items)
 			throws InterruptedException {
 		checkoutPage.checkoutItems();
-		Thread.sleep(2000);
 	}
 
 }
