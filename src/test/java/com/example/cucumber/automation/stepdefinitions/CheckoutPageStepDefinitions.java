@@ -31,4 +31,9 @@ public class CheckoutPageStepDefinitions {
 		checkoutPage.checkoutItems();
 	}
 
+	@Then("verify user has ability to checkout order")
+	public void verify_user_has_ability_to_checkout_order() {
+		checkoutPage.checkoutItems();
+	}
+
 }
