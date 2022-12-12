@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Assertions;
 import com.example.cucumber.automation.pageobjects.LandingPage;
 import com.example.cucumber.automation.utils.TestContextSetup;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 
@@ -33,9 +34,9 @@ public class LandingPageStepDefinitions {
 				"Extracted product name landingPageProductName = " + testContextSetup.getLandingPageProductName());
 	}
 
-	@When("added {string} items of the selected product to cart")
-	public void added_items_of_the_selected_product_to_cart(String quantity) {
-		landingPage.incrementQuantity(Integer.valueOf(quantity));
+	@And("added {int} items of the selected product to cart")
+	public void added_items_of_the_selected_product_to_cart(Integer quantity) {
+		landingPage.incrementQuantity(quantity);
 		landingPage.addToCart();
 	}
 

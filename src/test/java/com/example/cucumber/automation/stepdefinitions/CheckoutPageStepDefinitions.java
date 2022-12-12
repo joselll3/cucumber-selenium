@@ -6,6 +6,7 @@ import com.example.cucumber.automation.pageobjects.CheckoutPage;
 import com.example.cucumber.automation.utils.TestContextSetup;
 
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class CheckoutPageStepDefinitions {
 
@@ -26,14 +27,23 @@ public class CheckoutPageStepDefinitions {
 	}
 
 	@Then("^user proceds to Checkout and validate the (.+) items in checkout page$")
-	public void user_proceds_to_checkout_and_validate_the_tom_items_in_checkout_page(String items)
-			throws InterruptedException {
+	public void user_proceds_to_checkout_and_validate_the_tom_items_in_checkout_page(String items) {
 		checkoutPage.checkoutItems();
 	}
 
 	@Then("verify user has ability to checkout order")
 	public void verify_user_has_ability_to_checkout_order() {
 		checkoutPage.checkoutItems();
+	}
+
+	@When("user inspect the cart")
+	public void user_inspect_the_cart() {
+
+	}
+
+	@Then("verify the cart is empty")
+	public void verify_the_cart_is_empty() {
+
 	}
 
 }
