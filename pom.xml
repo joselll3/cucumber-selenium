@@ -80,8 +80,14 @@
         <artifactId>extentreports-cucumber7-adapter</artifactId>
         <version>${extend-reports.version}</version>
        	<scope>test</scope>
+       	<exclusions>
+       		<exclusion>
+       			<groupId>org.projectlombok</groupId>
+       			<artifactId>lombok</artifactId>
+       		</exclusion>
+       	</exclusions>
     </dependency>
-
+    
   </dependencies>
 
   <build>
