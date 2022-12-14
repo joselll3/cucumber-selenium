@@ -38,11 +38,12 @@ public class CheckoutPageStepDefinitions {
 
 	@When("user inspect the cart")
 	public void user_inspect_the_cart() {
-
+		checkoutPage.inspectCart();
 	}
 
 	@Then("verify the cart is empty")
 	public void verify_the_cart_is_empty() {
+		Assertions.assertEquals("You cart is empty!", checkoutPage.getCartContent());
 
 	}
 

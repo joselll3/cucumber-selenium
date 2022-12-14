@@ -1,6 +1,7 @@
 # -- FILE: features/Cart.feature
 Feature: User experience with Cart
 
+  @Cart
   Scenario: The cart is initially empty
     Given User is on GreenCart landing page
     When user inspect the cart
