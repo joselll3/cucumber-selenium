@@ -19,6 +19,7 @@ public class SeleniumConceptsTwoTest {
 		// Start session
 		System.setProperty("webdriver.chrome.driver",
 				Paths.get(System.getProperty("user.dir"), "src/test/resources/chromedriver.exe").toString());
+		System.setProperty("webdriver.http.factory", "jdk-http-client");
 		WebDriver driver = new ChromeDriver();
 
 		// Navigate to web page

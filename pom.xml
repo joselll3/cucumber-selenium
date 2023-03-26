@@ -76,6 +76,12 @@
     </dependency>
     
     <dependency>
+	    <groupId>org.seleniumhq.selenium</groupId>
+	    <artifactId>selenium-http-jdk-client</artifactId>
+	    <version>${selenium.version}</version>
+    </dependency>
+    
+    <dependency>
         <groupId>tech.grasshopper</groupId>
         <artifactId>extentreports-cucumber7-adapter</artifactId>
         <version>${extend-reports.version}</version>

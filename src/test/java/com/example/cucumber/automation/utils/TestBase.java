@@ -20,7 +20,9 @@ public class TestBase {
 		if (driver == null) {
 			Properties properties = loadProperties();
 			if (properties.getProperty(PROPERTY_BROWSER).equalsIgnoreCase(BROWSER_CHROME)) {
-				Paths.get(System.getProperty("user.dir"), "src/test/resources/chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver",
+						Paths.get(System.getProperty("user.dir"), "src/test/resources/chromedriver.exe").toString());
+				System.setProperty("webdriver.http.factory", "jdk-http-client");
 				driver = new ChromeDriver();
 			}
 			driver.get(properties.getProperty(PROPERTY_BASE_URL));
