@@ -7,6 +7,8 @@ public class PageObjectManager {
 	private LandingPage landingPage;
 	private OfferPage offerPage;
 	private CheckoutPage checkoutPage;
+	private BlogPage blogPage;
+
 	private WebDriver driver;
 
 	public PageObjectManager(WebDriver driver) {
@@ -34,4 +36,10 @@ public class PageObjectManager {
 		return checkoutPage;
 	}
 
+	public BlogPage getBlogPage() {
+		if (blogPage == null) {
+			blogPage = new BlogPage(driver);
+		}
+		return blogPage;
+	}
 }
