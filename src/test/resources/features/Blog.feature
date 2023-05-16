@@ -4,7 +4,7 @@ Feature: Funcionamiento del Blog de Profile
   Scenario Outline: Experiencia de uso en el blog
     
     Given el usuario accede a la sección del Blog
-      And selecciona la categoría <nombreCategoria>
+    When selecciona la categoría <nombreCategoria>
       And selecciona el primer artículo
     Then se carga el contenido del artículo
     
